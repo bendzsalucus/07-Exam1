@@ -2,8 +2,8 @@
 Exam 1, problem 2.
 
 Authors: David Mutchler, Vibha Alangar, Valerie Galluzzi, Mark Hays,
-         Amanda Stouder, their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Amanda Stouder, their colleagues and Lucus Bendzsa.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import testing_helper
 import time
@@ -31,9 +31,9 @@ def problem2a_testing():
     #       print('Expected:', expected)
     #       print('Actual:  ', actual)
     #
-    #  TODO (continued): IMPORTANT NOTE:
-    #  TODO (continued):   The function that you are TESTING is PURPOSELY
-    #  TODO (continued)    NOT implemented.  Do NOT implement it.  That is,
+    #  DOne (continued): IMPORTANT NOTE:
+    #  DOne (continued):   The function that you are TESTING is PURPOSELY
+    #  Done (continued)    NOT implemented.  Do NOT implement it.  That is,
     #                   do NOT implement the
     #                           sum_of_digits_of_sum_of_factors
     #                   function!  Just write these TESTS of that function
@@ -45,6 +45,29 @@ def problem2a_testing():
     print('Testing the   sum_of_digits_of_sum_of_factors   function:')
     print('---------------------------------------------------------')
 
+    expected = 3
+    actual = sum_of_digits_of_sum_of_factors(6)
+    print()
+    print('Expected:', expected)
+    print('Actual:  ', actual)
+
+    expected = 6
+    actual = sum_of_digits_of_sum_of_factors(8)
+    print()
+    print('Expected:', expected)
+    print('Actual:  ', actual)
+
+    expected = 9
+    actual = sum_of_digits_of_sum_of_factors(10)
+    print()
+    print('Expected:', expected)
+    print('Actual:  ', actual)
+
+    expected = 6
+    actual = sum_of_digits_of_sum_of_factors(14)
+    print()
+    print('Expected:', expected)
+    print('Actual:  ', actual)
 
 def sum_of_digits_of_sum_of_factors(n):
     """
@@ -70,7 +93,7 @@ def sum_of_digits_of_sum_of_factors(n):
 
 
 ################################################################################
-# TODO: 3.  READ the green doc-string for the   number_of_factors   function
+# DOne: 3.  READ the green doc-string for the   number_of_factors   function
 #    defined below.  You do NOT need to understand its implementation,
 #    just its specification (per the doc-string).
 #    You should  ** CALL **  that function as needed in implementing
@@ -319,6 +342,13 @@ def problem2b(a, b, x):
     #                         that is DEFINED ABOVE.
     ############################################################################
 
+    total = 0
+    for k in range(b-a+1):
+        p = a + k
+        r = number_of_factors(p)
+        if r >= x:
+            total = p + total
+    return total
 
 def run_test_problem2c():
     """ Tests the   problem2c   function. """
@@ -442,6 +472,10 @@ def problem1c(m):
     # TODO (continued)    You get   NO credit   if your solution is more
     # TODO (continued)    than 3 lines of code (and it can be done in 1 line).
     ############################################################################
+    #for k in range(10):
+        #if number_of_factors(m + 10 - k) = m + 10 - k +1
+        #total = (m + 10 - k)
+
 
 
 ################################################################################
